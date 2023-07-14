@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Car Sell Price</title>
+</head>
+
+<body>
+    <h1>Car Details</h1>
+    <form action="{{ url_for('predict')}}" method="POST">
+        <p><input type="text" label="Car Name" name="car_name" placeholder="Car Name"></p>
+        <p><input type="text" label='Present Price' name="present_price" placeholder="Present Price"></p>
+        <p><input type="text" label='Kms Driven' name="kms_driven" placeholder="Kms Driven"></p>
+        <p><input type="text" label='Fuel Type' name="fuel_type" placeholder="Fuel Type"></p>
+        <p><input type="text" label='Transmission' name="transmission" placeholder="Transmission"></p>
+        <p><input type="text" label='Age of Car' name="age_of_car" placeholder="Age of Car"></p>
+
+        <p><input type="submit" value="Submit">
+    </form>
+    <div><strong> <span style="color: #0a0506">{{ prediction_text }}</span></strong></div>
+</body>
+
+</html>
